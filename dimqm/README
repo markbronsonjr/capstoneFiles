@@ -1,0 +1,18 @@
+Description of files in this directory
+
+inputFiles
+==========
+
+inputFiles/benzene_analfreq_dimqm.run - ADF input file for normal mode analysis with DIM/QM
+inputFiles/aores_dimqm_template.run   - Template for ADF polarizability calculation with DIM/QM
+
+inputFiles/normalModeInput: All td-dft simulations done at displaced coordinates along normal modes
+
+
+outputFiles
+===========
+
+outputFiles/benzene_analfreq_dimqm.out - ADF output file for normal mode analysis with DIM/QM
+
+outputFiles/normalModeOut: output of same named *.run jobs in inputFiles/normalModeInput
+

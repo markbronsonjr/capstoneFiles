@@ -1,0 +1,24 @@
+title au2869 2.5ev
+PIM 
+
+
+print eff
+print coords
+print input 
+print pol
+print atmdip
+
+
+algorithm 0
+
+freqrange ev 3.6 3.6 1
+
+Ag
+ rad 1.4445
+ exp Ag_jc
+end
+
+xyz
+ ag2869_v2.xyz
+end 
+

@@ -1,0 +1,71 @@
+#! /bin/sh
+
+# ==============================
+# The Molecule
+# ==============================
+
+"$ADFBIN/adf" <<eor
+TITLE None
+
+ATOMS
+1  C     0.02970000    3.99996827   -1.39860000
+2  C    -1.19700000    3.99959276   -0.72530000
+3  C    -1.22670000    3.99962449    0.67370000
+4  C    -0.02970000    4.00003173    1.39860000
+5  C     1.19700000    4.00040724    0.72530000
+6  C     1.22670000    4.00037551   -0.67370000
+7  H    -2.13010000    4.00271849   -1.29149471
+8  H    -2.18310000    4.00250165    1.19978942
+9  H    -0.05301587    3.99978844    2.49010000
+10 H     2.13010000    3.99728151    1.29150529
+11 H     2.18320000    3.99749835   -1.19981058
+12 H     0.05288413    4.00021156   -2.49010000
+END
+
+
+BASIS
+type TZP
+core none
+createoutput None
+END
+
+XC
+ gga BP86
+end
+
+DIMQM
+ PIM
+ ForceField LJ12-6
+ Frequency
+ localField
+end
+
+DIMPAR
+ Ag
+  rad 1.4445
+  exp /amphome/mjb675/Program/dim3/dim/dielectrics/Ag_jc
+ subend
+ xyz
+  /amphome/mjb675/workspace/capstone/ag/dimqm/ag2869_v2.xyz
+ subend
+end
+
+
+symmetry nosym
+
+aoresponse
+ alda
+ frequency 1 3.6 eV
+ lifetime 0.0037
+end
+
+eor
+
+
+
+
+
+
+
+
+

@@ -1,0 +1,55 @@
+#! /bin/sh
+
+# ==============================
+# The Molecule
+# ==============================
+
+"$ADFBIN/adf" <<eor
+ATOMS
+    1 C         0.710660   -1.897512    0.000022
+    2 C        -0.503814   -2.587639   -0.001620
+    3 C        -0.477544   -3.986522   -0.002892
+    4 N         0.653156   -4.714937   -0.002630
+    5 C         1.812620   -4.033306   -0.001042
+    6 C         1.895897   -2.636734    0.000318
+    7 H        -1.456099   -2.054368   -0.001914
+    8 H        -1.413700   -4.553282   -0.004189
+    9 H         2.724844   -4.637811   -0.000847
+   10 H         2.869271   -2.142781    0.001579
+   11 H         0.733070   -0.805966    0.001049
+END
+
+
+BASIS
+type TZP
+core none
+createoutput None
+END
+
+XC
+ gga BP86
+end
+
+
+symmetry nosym
+
+aoresponse
+ alda
+ frequency 1 3.6 eV
+ lifetime 0.0037
+ El_Dipole_El_Dipole
+ El_Dipole_El_Quadrupole
+ El_Quadrupole_El_Quadrupole
+ Traceless
+end 
+
+eor
+
+
+
+
+
+
+
+
+

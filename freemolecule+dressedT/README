@@ -1,0 +1,24 @@
+Description of files in this directory
+
+inputFiles
+==========
+
+inputFiles/benzene_geo.run      - ADF input file for geometry optimization
+inputFiles/benzene_analfreq.run - ADF input file for normal mode analysis
+inputFiles/aores_template.run   - Template for ADF polarizability calculation
+inputFiles/ag2869_3.6ev.dim     - DIM input file for calculating the optical response 
+                                   of the nanoparticle
+inputFiles/ag2869_v2.xyz        - XYZ coordinates of the nanoparticle.
+
+inputFiles/normalModeInput: All td-dft simulations done at displaced coordinates along normal modes
+
+
+outputFiles
+===========
+
+outputFiles/benzene_geo.out      - ADF output file for geometry optimization
+outputFiles/benzene_analfreq.out - ADF output file for normal mode analysis
+outputFiles/ag2869_3.6ev.out     - DIM output file for optical response
+
+outputFiles/normalModeOut: output of same named *.run jobs in inputFiles/normalModeInput
+
